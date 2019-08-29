@@ -17,8 +17,8 @@ func run(args []string) int {
 	bindAddress := flag.String("ip", "0.0.0.0", "IP address to bind")
 	listenPort := flag.Int("port", 25478, "port number to listen on")
 	tlsListenPort := flag.Int("tlsport", 25443, "port number to listen on with TLS")
-	// 5,242,880 bytes == 5 MiB
-	maxUploadSize := flag.Int64("upload_limit", 5242880, "max size of uploaded file (byte)")
+	// 3221225472 bytes == 3GB
+	maxUploadSize := flag.Int64("upload_limit", 3221225472, "max size of uploaded file (byte)")
 	tokenFlag := flag.String("token", "", "specify the security token (it is automatically generated if empty)")
 	logLevelFlag := flag.String("loglevel", "info", "logging level")
 	certFile := flag.String("cert", "", "path to certificate file")
